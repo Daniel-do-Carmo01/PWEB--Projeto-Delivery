@@ -1,13 +1,24 @@
-export class Database{
+export class Database {
     constructor() {
         this.entregas = []
-        this.nextId = 1
+        this.motoristas = [{"nome": "João Silva", "cpf": "123.456.789-00", "placaVeiculo": "ABC-1234",id:1000, status:"INATIVO"}]
+        this.nextEntregaId = 1
+        this.nextMotoristasId = 1
     }
 
-    getEntregas(){
+    getEntregas() {
         return this.entregas
     }
-    generateId(){
-        return this.nextId++
+
+    getMotoristas() {
+        return this.motoristas
+    }
+
+    generateEntregaId() {
+        return this.nextEntregaId++
+    }
+
+    generateMotoristasId() {
+        return this.nextMotoristasId++
     }
 }
